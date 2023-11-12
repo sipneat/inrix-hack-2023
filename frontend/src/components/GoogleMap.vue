@@ -1,7 +1,7 @@
 <template>
   <div class="map">
     <GoogleMap api-key="AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c" style="width: 550px; height: 950px; margin-left: 210px; padding-top: 350px; position: absolute;" :center="center" :zoom="15">
-      <Marker v-for="(location, i) in locations" :options="{ position: location, label: `${i}` }" @click="() => handleClick(`${i}`)" />
+      <Marker v-for="(location, i) in locations" :options="{ position: location }" @click="handleClick(`${i}`)" />
     </GoogleMap>
   </div>
 </template>
@@ -12,8 +12,9 @@ import { GoogleMap, Marker } from "vue3-google-map";
 
 var locations = [];
 var names = [];
-var cost = [];
-var dist = [];
+var costs = [];
+var dists = [];
+var prob = [];
 
 function getDistanceBetweenPoints(latitude1, longitude1, latitude2, longitude2, unit = 'miles') {
     let theta = longitude1 - longitude2;
@@ -22,7 +23,7 @@ function getDistanceBetweenPoints(latitude1, longitude1, latitude2, longitude2, 
         Math.cos(latitude1 * (Math.PI/180)) * Math.cos(latitude2 * (Math.PI/180)) * Math.cos(theta * (Math.PI/180))
     );
     if (unit == 'miles') {
-        return Math.round(distance, 5);
+        return distance.toFixed(2);
     } else if (unit == 'kilometers') {
         return Math.round(distance * 1.609344, 2);
     }
@@ -59,11 +60,16 @@ async function generatePoints(adr, rad) {
     names.push({name: rawData[i]["name"]});
 
     if (rawData[i]["amenities"][0] == undefined)
-      cost.push({cost: "N/A"});
+      costs.push({cost: "N/A"});
     else
-      cost.push({cost: rawData[i]["amenities"][0]["name"]});
+      costs.push({cost: rawData[i]["amenities"][0]["name"]});
 
-    dist.push({ dist: getDistanceBetweenPoints(latLon[0], latLon[1], homeLat, homeLon)});
+    dists.push({ dist: getDistanceBetweenPoints(latLon[0], latLon[1], homeLat, homeLon)});
+
+    if (rawData[i]["probability"] == null)
+      prob.push({prob: "N/A"});
+    else
+      prob.push({prob: rawData[i]["probability"]});
 }
 }
 
@@ -72,32 +78,47 @@ let rad = 0.2;
 
 export default defineComponent({
   components: { GoogleMap, Marker },
-  mounted() { 
+  data() {
+        return {
+            name: "",
+            cost: "",
+            dist: "",
+            prob: ""
+        };
+    },
+    mounted() { 
     this.emitter.on("search", ({adr, rad}) => {
-      console.log(this.adr);
-      console.log(this.rad);
+      console.log(adr);
+      console.log(rad);
+      this.removeMarker(10);
     });
   },
+    methods: {
+        handleClick(arg) {
+        const clickedName = names[arg];
+        console.log(clickedName);
+        const clickedCost = costs[arg];
+        console.log(clickedCost);
+        const clickedDist = dists[arg];
+        console.log(clickedDist);
+        const clickedProb = prob[arg];
+        console.log(clickedProb);
+        this.emitter.emit('handleClick', { name: clickedName, cost: clickedCost, dists: clickedDist, prob: clickedProb });
+        }
+    },
   async setup() {
     let lati = 37.7680183;
     let long = -122.3878772;
     const center = { lat: lati, lng: long };
 
-    const handleClick = (arg) => {
-      // Handle marker click here
-      console.log(locations[arg]);
-      console.log(names[arg]);
-      console.log(cost[arg]);
-      console.log(dist[arg]);
-    };
-
     await generatePoints(adr, rad);
     console.log(locations);
     console.log(names);
-    console.log(cost);
-    console.log(dist);
+    console.log(costs);
+    console.log(dists);
+    
 
-    return { center, locations, handleClick };
+    return { center, locations };
   },
 });
 

@@ -38,7 +38,7 @@
 
 
     <div style="height: 436px; left: 952px; top: 488px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 55px; display: inline-flex">
-        <div style="width: 288px; text-align: center; color: white; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Selected Parking:</div>
+        <div style="width: 288px; text-align: center; color: white; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">{{ name }}</div>
         <div style="justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
             <div style="width: 53px; flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 55px; display: inline-flex">
                 <div style="width: 45px; height: 45px; position: relative">
@@ -53,19 +53,19 @@
             </div>
             <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 45px; display: inline-flex">
                 <div style="width: 57px; height: 48px; padding: 10px; background: #F25F5C; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0</div>
+                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">{{ dist }}</div>
                 </div>
                 <div style="width: 57px; height: 48px; padding: 10px; background: #F25F5C; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0</div>
+                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">{{ cost }}</div>
                 </div>
                 <div style="width: 57px; height: 48px; padding: 10px; background: #F25F5C; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0</div>
+                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">{{ prob }}</div>
                 </div>
             </div>
             <div style="height: 241px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 60px; display: inline-flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Mi Away</div>
-                <div style="text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">$/hour</div>
-                <div style="text-align: center; color: white; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Available till</div>
+                <div style="text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Is It Free?</div>
+                <div style="text-align: center; color: white; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Probability</div>
             </div>
         </div>
         <div style="width: 288px; height: 41px; text-align: center; color: white; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">Reference the street view to gauge parking space size</div>
@@ -105,8 +105,24 @@ export default {
     data() {
         return {
             searchVal: "",
-            mileage: 0.2
+            mileage: 0.2,
+            name: "Parking Name",
+            cost: "Free",
+            dist: "0.2",
+            prob: "0"
         }
+    },
+    mounted() {
+        this.emitter.on('handleClick', ({name, cost, dists, prob}) => {
+            console.log(name);
+            console.log(cost);
+            console.log(dists);
+            console.log(prob);
+            this.name = name["name"];
+            this.cost = cost["cost"];
+            this.dist = dists["dist"];
+            this.prob = prob["prob"];
+        });
     },
     methods: {
         search() {
