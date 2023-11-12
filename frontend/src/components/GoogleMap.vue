@@ -12,7 +12,7 @@
 import { defineComponent } from "vue";
 import { GoogleMap, Marker } from "vue3-google-map";
 
-let locations = [];
+var locations = [];
 
 async function callProcessData(adr, rad) {
   const response = await fetch(`http://localhost:5000/processData?address=${adr}&radius=${rad}`)
@@ -28,11 +28,12 @@ async function callLatLon(adrs) {
   return data;
 }
 
-function generatePoints(adr, rad) { 
-  const rawData = callProcessData(adr, rad);
+async function generatePoints(adr, rad) { 
+  const rawData = await callProcessData(adr, rad);
 
-  for (let i = 0; i < Object.keys(rawData).length; i++) {
-    latLon = callLatLon(result[i]["name"]);
+  for (let i = 0; i < rawData.length; i++) {
+    let latLon = await callLatLon(rawData[i]["name"] + " san francisco");
+
     locations.push({
       lat: latLon[0],
       lng: latLon[1],
@@ -44,14 +45,15 @@ function generatePoints(adr, rad) {
 export default defineComponent({
   props: { adr: String, rad: Number },
   components: { GoogleMap, Marker },
-  setup() {
+  async setup() {
     let lati = 37.7680183;
     let long = -122.3878772;
     const center = { lat: lati, lng: long };
 
     const adr = "1 Warriors Way San Francisco";
-    const rad = 0.2;
-    generatePoints(adr, rad);
+    const rad = 0.5;
+    await generatePoints(adr, rad);
+    console.log(locations);
 
     return { center, locations };
   },

@@ -10,5 +10,7 @@ import MainPage from './components/MainPage.vue'
 
 <template>
   <MainPage />
+  <Suspense>
   <GoogleMap />
+  </Suspense>
 </template>
