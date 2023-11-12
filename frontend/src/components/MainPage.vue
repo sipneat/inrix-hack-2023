@@ -3,6 +3,14 @@
     import StreetView from './StreetView.vue';
 </script>
 <template>
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+
+    
+
+
+
+
+
     <div style="width: 100%; height: 100%; position: relative; background: #F60C0C">
     <div style="width: 100%; height: 135px; left: 0px; top: 0px; position: absolute; background: #053B50"></div>
     <div style="width: 360px; height: 811px; left: 920px; top: 184px; position: absolute; background: #176B87; border-radius: 15px"></div>
@@ -15,7 +23,7 @@
         <input class="search" type = "text" id = "location" location = "location" placeholder = "ex: Golden Gate Brg">
     </div>
 
-    <div style="left: 745px; top: 215px; position: absolute">
+    <div style="left: 735px; top: 215px; position: absolute">
         <button class="button2" type="submit">Submit</button>
     </div>
     
@@ -26,6 +34,7 @@
     <div style="width: 302px; height: 6px; left: 945px; top: 418px; position: absolute; background: #EEEEEE; border-radius: 100px">   </div>
     
 
+    
 
     
 
@@ -95,6 +104,8 @@
 
 <style scoped>
 
+
+
 .main {
     width: 100%; 
     height: 100%; 
@@ -107,6 +118,15 @@
     justify-content: flex-start; 
     align-items: flex-start; 
     gap: 8px; 
+
+
+    font-family: 'Kanit';
+    font-size: 22px;
+
+
+
+
+
     display: inline-flex
 }
 

@@ -15,7 +15,7 @@
 <style>
 
 .button2 {
-width: 67px; 
+width: 75px; 
 height: 48px; 
 padding: 10px; 
 background: #64CCC5; 
