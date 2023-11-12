@@ -45,18 +45,23 @@
             <div style="width: 345px; text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Max Miles from Destination</div>
         </div>
         <div style="justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.2</div>
-            </div>
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            </div>-->
+            <button class="button" type="submit">0.2</button>
+            <!--<div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.5</div>
-            </div>
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            </div> -->
+            <button class="button" type="submit">0.5</button>
+            <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.7</div>
-            </div>
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            </div> --> 
+            <button class="button" type="submit">0.7</button>
+
+           <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">1.0</div>
-            </div>
+            </div> -->
+            <button class="button" type="submit">1.0</button>
         </div>
     </div>
     <div style="width: 15px; height: 15px; left: 430px; top: 371px; position: absolute; background: #F25F5C; border-radius: 9999px"></div>
