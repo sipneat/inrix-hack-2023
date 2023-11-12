@@ -45,10 +45,10 @@
                     <img style="width: 40px; height: 40px" src="/Frame.png" />
                 </div>
                 <div style="width: 45px; height: 45px; position: relative; background: #176B87">
-                    <img style="width: 40px; height: 40px" src="public\Frame1.png" />
+                    <img style="width: 40px; height: 40px" src="/Frame1.png" />
                 </div>
                 <div style="width: 45px; height: 45px; position: relative">
-                    <img style="width: 40px; height: 40px" src="public\Frame2.png" />
+                    <img style="width: 40px; height: 40px" src="/Frame2.png" />
                 </div>
             </div>
             <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 45px; display: inline-flex">
@@ -98,9 +98,6 @@
 </div>
 </template>
 <script>
-
-import GoogleMap from './googleMap.vue';
-
 export default {
     data() {
         return {
