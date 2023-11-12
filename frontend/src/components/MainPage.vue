@@ -1,9 +1,14 @@
-
+<script>
+    import GoogleMap from './googleMap.vue';
+    import StreetView from './StreetView.vue';
+</script>
 <template>
     <div style="width: 100%; height: 100%; position: relative; background: #F60C0C">
     <div style="width: 100%; height: 135px; left: 0px; top: 0px; position: absolute; background: #053B50"></div>
     <div style="width: 360px; height: 811px; left: 920px; top: 184px; position: absolute; background: #176B87; border-radius: 15px"></div>
-    <div style="width: 645px; height: 689px; left: 160px; top: 306px; position: absolute; background: #176B87; border-radius: 15px"></div>
+    <div style="width: 645px; height: 689px; left: 160px; top: 306px; position: absolute; background: #176B87; border-radius: 15px">
+        <GoogleMap />
+    </div>
     <div style="width: 486px; height: 101px; left: 477px; top: 17px; position: absolute; text-align: center; color: #EEEEEE; font-size: 70px; font-family: Kanit; font-weight: 600; line-height: 90px; word-wrap: break-word">Parking ++</div>
     <div style="width: 595px; padding-left: 8px; padding-right: 8px; left: 185px; top: 221px; position: absolute; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16); border-radius: 24px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
         <img style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
@@ -54,7 +59,5 @@
             </div>
         </div>
     </div>
-    <div style="width: 15px; height: 15px; left: 430px; top: 371px; position: absolute; background: #F25F5C; border-radius: 9999px"></div>
-    <div style="width: 200px; height: 200px; left: 195px; top: 346px; position: absolute; background: rgba(100, 204, 197, 0.45); border-radius: 9999px; border: 4px #64CCC5 solid"></div>
 </div>
 </template>
