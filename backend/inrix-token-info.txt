@@ -1,0 +1,5 @@
+app id: 97ld5sp5d8
+app key: WvIvw17d5hGwZIUXB7GUavz3kutZjFX1IlBUaOm9
+hash token: OTdsZDVzcDVkOHxXdkl2dzE3ZDVoR3daSVVYQjdHVWF2ejNrdXRaakZYMUlsQlVhT205
+
+google maps api key: AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c
