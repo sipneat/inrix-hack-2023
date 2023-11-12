@@ -44,7 +44,7 @@ def processData():
     lon = str(latLon[1])
     rad = str(int(rad * 1609)) #convert miles to meters
     
-    url = "https://api.iq.inrix.com/blocks/v3?point=" + lat + "%7C" + lon + "&radius=" + rad + "&limit=50"
+    url = "https://api.iq.inrix.com/blocks/v3?point=" + lat + "%7C" + lon + "&radius=" + rad + "&limit=10"
     auth_token = getToken()
 
     payload = {}
