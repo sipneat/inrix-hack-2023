@@ -67,9 +67,17 @@ async function generatePoints(adr, rad) {
 }
 }
 
+let adr = "1 warriors way san francisco";
+let rad = 0.2;
+
 export default defineComponent({
-  props: { adr: String, rad: Number },
   components: { GoogleMap, Marker },
+  mounted() { 
+    this.emitter.on("search", ({adr, rad}) => {
+      console.log(this.adr);
+      console.log(this.rad);
+    });
+  },
   async setup() {
     let lati = 37.7680183;
     let long = -122.3878772;
@@ -83,8 +91,6 @@ export default defineComponent({
       console.log(dist[arg]);
     };
 
-    const adr = "1 Warriors Way San Francisco";
-    const rad = 0.5;
     await generatePoints(adr, rad);
     console.log(locations);
     console.log(names);

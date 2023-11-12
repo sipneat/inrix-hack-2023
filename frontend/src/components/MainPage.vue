@@ -100,7 +100,6 @@
 <script>
 
 import GoogleMap from './googleMap.vue';
-import StreetView from './StreetView.vue';
 
 export default {
     data() {
@@ -111,7 +110,7 @@ export default {
     },
     methods: {
         search() {
-            console.log(this.searchVal, this.mileage)
+            this.emitter.emit('search', this.searchVal, this.mileage);
         }
     }
 }
