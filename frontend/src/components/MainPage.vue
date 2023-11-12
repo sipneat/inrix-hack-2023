@@ -15,16 +15,13 @@
         <div style="justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
             <div style="width: 53px; flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 55px; display: inline-flex">
                 <div style="width: 45px; height: 45px; position: relative">
-                    <div style="width: 33.75px; height: 41.25px; left: 5.62px; top: 1.88px; position: absolute; border: 2px #EEEEEE solid"></div>
-                    <div style="width: 11.25px; height: 11.25px; left: 16.88px; top: 13.12px; position: absolute; border: 2px #EEEEEE solid"></div>
+                    <img style="width: 40px; height: 40px" src="/Frame.png" />
                 </div>
                 <div style="width: 45px; height: 45px; position: relative; background: #176B87">
-                    <div style="width: 0px; height: 41.25px; left: 22.50px; top: 1.88px; position: absolute; border: 2px #EEEEEE solid"></div>
-                    <div style="width: 22.50px; height: 26.25px; left: 11.25px; top: 9.38px; position: absolute; border: 2px #EEEEEE solid"></div>
+                    <img style="width: 40px; height: 40px" src="public\Frame1.png" />
                 </div>
                 <div style="width: 45px; height: 45px; position: relative">
-                    <div style="width: 37.50px; height: 37.50px; left: 3.75px; top: 3.75px; position: absolute; border: 2px #EEEEEE solid"></div>
-                    <div style="width: 7.50px; height: 15px; left: 22.50px; top: 11.25px; position: absolute; border: 2px #EEEEEE solid"></div>
+                    <img style="width: 40px; height: 40px" src="public\Frame2.png" />
                 </div>
             </div>
             <div style="height: 241px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 60px; display: inline-flex">
