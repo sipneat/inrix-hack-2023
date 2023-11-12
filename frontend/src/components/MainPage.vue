@@ -48,6 +48,17 @@
                     <img style="width: 40px; height: 40px" src="public\Frame2.png" />
                 </div>
             </div>
+            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 45px; display: inline-flex">
+                <div style="width: 57px; height: 48px; padding: 10px; background: #F25F5C; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0</div>
+                </div>
+                <div style="width: 57px; height: 48px; padding: 10px; background: #F25F5C; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0</div>
+                </div>
+                <div style="width: 57px; height: 48px; padding: 10px; background: #F25F5C; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                    <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0</div>
+                </div>
+            </div>
             <div style="height: 241px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 60px; display: inline-flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Mi Away</div>
                 <div style="text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">$/hour</div>
