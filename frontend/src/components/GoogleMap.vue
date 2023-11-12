@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <GoogleMap api-key="AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c" style="width: 585px; height: 960px; margin-left: 13%; padding-top: 23%; position: absolute;" :center="center" :zoom="15">
+    <GoogleMap api-key="AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c" style="width: 550px; height: 950px; margin-left: 210px; padding-top: 350px; position: absolute;" :center="center" :zoom="15">
       <MarkerCluster>
       <Marker v-for="(location, i) in locations" :options="{ position: location }" :key="i" />
     </MarkerCluster>
