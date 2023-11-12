@@ -38,8 +38,8 @@ def getLots():
 def processData(adr):
     latLon = adrToLatLon(adr)
     lat = str(latLon[0])
-    lng = str(latLon[1])
-    url = "https://api.iq.inrix.com/lots/v3?point=" + lat + "%7C" + lng + "&radius=150"
+    lon = str(latLon[1])
+    url = "https://api.iq.inrix.com/lots/v3?point=" + lat + "%7C" + lon + "&radius=150"
     auth_token = getToken()
 
     payload = {}
@@ -50,6 +50,7 @@ def processData(adr):
     return response.json()['result']
 
 def adrToLatLon(adr):
+    adr = adr.replace(" ", "%20")
     url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + adr + "&key=AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c"
 
     payload = {}
