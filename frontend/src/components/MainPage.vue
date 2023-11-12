@@ -79,20 +79,20 @@
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.2</div>
             </div>-->
             
-            <button class="button1" type="submit" @click="mileage = 0.2">0.2</button>
+            <button class="button1" type="submit" @click="mileage = 0.2, sendData(mileage)">0.2</button>
             <!--<div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.5</div>
             </div> -->
-            <button class="button1" type="submit" @click="mileage = 0.5">0.5</button>
+            <button class="button1" type="submit" @click="mileage = 0.5, sendData(mileage)">0.5</button>
             <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.7</div>
             </div> --> 
-            <button class="button1" type="submit" @click="mileage = 0.7">0.7</button>
+            <button class="button1" type="submit" @click="mileage = 0.7, sendData(mileage)">0.7</button>
 
            <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">1.0</div>
             </div> -->
-            <button class="button1" type="submit" @click="mileage = 1.0">1.0</button>
+            <button class="button1" type="submit" @click="mileage = 1.0, sendData(mileage)">1.0</button>
         </div>
     </div>
 </div>
@@ -101,6 +101,7 @@
 
 import GoogleMap from './GoogleMap.vue';
 import StreetView from './StreetView.vue';
+import {EventBus} from "@/EventBus";
 
 export default {
     data() {
@@ -113,8 +114,12 @@ export default {
         search() {
             console.log(this.searchVal, this.mileage)
         }
+    },
+    sendData(distance){
+        EventBus.$emit("maxDistance", distance);
     }
 }
+
 </script>
 
 <style scoped>
