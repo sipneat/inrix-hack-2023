@@ -98,6 +98,7 @@
 </div>
 </template>
 <script>
+import Buttons from './Buttons.vue';
 export default {
     data() {
         return {
