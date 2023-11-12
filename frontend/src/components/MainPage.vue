@@ -74,7 +74,7 @@
         </div>
         <div style="width: 288px; height: 41px; text-align: center; color: white; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">Reference the street view to gauge parking space size</div>
     </div>
-    <div style="left: 920px; top: 215px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 28px; display: inline-flex">
+    <div style="left: 928px; top: 215px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 28px; display: inline-flex">
         <div style="height: 80px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
             <div style="width: 345px; text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Max Miles from Destination</div>
         </div>
