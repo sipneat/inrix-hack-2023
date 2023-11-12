@@ -10,4 +10,5 @@ import MainPage from './components/MainPage.vue'
 
 <template>
   <MainPage />
+  <GoogleMap />
 </template>
