@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import requests
 
 
@@ -33,12 +33,16 @@ def getLots():
 
     return response.json()['result']
 
-@app.route('/processData/<adr>', methods=['GET'])
-def processData(adr):
-    latLon = adrToLatLon(adr)
+@app.route('/processData', methods=['GET'])
+def processData():
+    adr = request.args.get('address')
+    rad = float(request.args.get('radius'))
+    latLon = adrToLatLon(adr) 
     lat = str(latLon[0])
     lon = str(latLon[1])
-    url = "https://api.iq.inrix.com/lots/v3?point=" + lat + "%7C" + lon + "&radius=150"
+    rad = str(int(rad * 1609)) #convert miles to meters
+    
+    url = "https://api.iq.inrix.com/blocks/v3?point=" + lat + "%7C" + lon + "&radius=" + rad + "&limit=10"
     auth_token = getToken()
 
     payload = {}
@@ -48,6 +52,7 @@ def processData(adr):
 
     return response.json()['result']
 
+@app.route('/adrToLatLon/<adr>', methods=['GET'])
 def adrToLatLon(adr):
     adr = adr.replace(" ", "%20")
     url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + adr + "&key=AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c"
