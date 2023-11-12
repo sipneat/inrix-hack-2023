@@ -30,14 +30,14 @@ function getDistanceBetweenPoints(latitude1, longitude1, latitude2, longitude2, 
 }
 
 async function callProcessData(adr, rad) {
-  const response = await fetch(`http://127.0.0.1:5000/processData?address=${adr}&radius=${rad}`)
+  const response = await fetch(`http://http://ec2-54-226-249-42.compute-1.amazonaws.com:5000/processData?address=${adr}&radius=${rad}`)
   const data = await response.json();
 
   return data;
 }
 
 async function callLatLon(adrs) {
-  const response = await fetch(`http://127.0.0.1:5000/adrToLatLon/${adrs}`)
+  const response = await fetch(`http://http://ec2-54-226-249-42.compute-1.amazonaws.com/adrToLatLon/${adrs}`)
   const data = await response.json();
 
   return data;
