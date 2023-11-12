@@ -99,7 +99,7 @@
 </template>
 <script>
 
-import GoogleMap from './GoogleMap.vue';
+import GoogleMap from './googleMap.vue';
 import StreetView from './StreetView.vue';
 import {EventBus} from "@/EventBus";
 
