@@ -19,9 +19,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.map {
-  background-color: aqua;
-}
-</style>
