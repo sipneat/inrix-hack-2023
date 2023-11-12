@@ -1,4 +1,12 @@
 <template>
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+
+    
+
+
+
+
+
     <div style="width: 100%; height: 100%; position: relative; background: #F60C0C">
     <div style="width: 100%; height: 135px; left: 0px; top: 0px; position: absolute; background: #053B50"></div>
     <div style="width: 360px; height: 811px; left: 920px; top: 184px; position: absolute; background: #176B87; border-radius: 15px"></div>
@@ -22,6 +30,7 @@
     <div style="width: 302px; height: 6px; left: 945px; top: 418px; position: absolute; background: #EEEEEE; border-radius: 100px">   </div>
     
 
+    
 
     
 
@@ -61,7 +70,7 @@
         </div>
         <div style="width: 288px; height: 41px; text-align: center; color: white; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">Reference the street view to gauge parking space size</div>
     </div>
-    <div style="left: 920px; top: 215px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 28px; display: inline-flex">
+    <div style="left: 928px; top: 215px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: center; gap: 28px; display: inline-flex">
         <div style="height: 80px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: flex">
             <div style="width: 345px; text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Max Miles from Destination</div>
         </div>
@@ -110,6 +119,8 @@ export default {
 
 <style scoped>
 
+
+
 .main {
     width: 100%; 
     height: 100%; 
@@ -122,6 +133,15 @@ export default {
     justify-content: flex-start; 
     align-items: flex-start; 
     gap: 8px; 
+
+
+    font-family: 'Kanit';
+    font-size: 22px;
+
+
+
+
+
     display: inline-flex
 }
 
