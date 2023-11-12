@@ -15,14 +15,14 @@ import { GoogleMap, Marker } from "vue3-google-map";
 var locations = [];
 
 async function callProcessData(adr, rad) {
-  const response = await fetch(`http://localhost:5000/processData?address=${adr}&radius=${rad}`)
+  const response = await fetch(`http://127.0.0.1:5000/processData?address=${adr}&radius=${rad}`)
   const data = await response.json();
 
   return data;
 }
 
 async function callLatLon(adrs) {
-  const response = await fetch(`http://localhost:5000/adrToLatLon/${adrs}`)
+  const response = await fetch(`http://127.0.0.1:5000/adrToLatLon/${adrs}`)
   const data = await response.json();
 
   return data;
@@ -58,4 +58,6 @@ export default defineComponent({
     return { center, locations };
   },
 });
+
+
 </script>
