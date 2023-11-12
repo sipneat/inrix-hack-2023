@@ -2,7 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import SearchBar from './components/SearchBar.vue'
-import StreetView from './components/StreetView.vue';
+import GoogleMap from './components/googleMap.vue';
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import StreetView from './components/StreetView.vue';
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <SearchBar />
-      <StreetView />
+      <GoogleMap />
     </div>
   </header>
 
