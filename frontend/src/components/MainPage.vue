@@ -1,12 +1,14 @@
-<script setup>
-
+<script>
+    import GoogleMap from './googleMap.vue';
+    import StreetView from './StreetView.vue';
 </script>
-
 <template>
     <div style="width: 100%; height: 100%; position: relative; background: #F60C0C">
     <div style="width: 100%; height: 135px; left: 0px; top: 0px; position: absolute; background: #053B50"></div>
     <div style="width: 360px; height: 811px; left: 920px; top: 184px; position: absolute; background: #176B87; border-radius: 15px"></div>
-    <div style="width: 645px; height: 689px; left: 160px; top: 306px; position: absolute; background: #176B87; border-radius: 15px"></div>
+    <div style="width: 645px; height: 689px; left: 160px; top: 306px; position: absolute; background: #176B87; border-radius: 15px">
+        <GoogleMap />
+    </div>
     <div style="width: 486px; height: 101px; left: 477px; top: 17px; position: absolute; text-align: center; color: #EEEEEE; font-size: 70px; font-family: Kanit; font-weight: 600; line-height: 90px; word-wrap: break-word">Parking ++</div>
     <div style="width: 595px; padding-left: 8px; padding-right: 8px; left: 185px; top: 221px; position: absolute; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16); border-radius: 24px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
         <img style="width: 40px; height: 40px" src="https://s3-alpha-sig.figma.com/img/2503/8781/6ba33e4e01d59ea6f3e0b1f4aa06d766?Expires=1700438400&Signature=iY6l3mOyKAhYSbcLxMxmYKUVTTzjT1x0B8H3mlbFgMxNOJa9GYnS8aNY4wBXe9oqZBE5fd5dEjqndWc8qxz4R5qLVp9k2UTIfOitWpQZ-8Lcw8NxfZ8Y2RgtmaAxF~kjAseLegrMHowquAvSivWFNMdGhKxGn3Ro0CwRkICPlSpqEA1yMxkyjHFE0ecVWGQl~tjUetyOtO-HdgP9VoaQwACJ6dGyL9g73GdSGTIqP9hUmRfPaX8vheZRZSP2uNgn5vZKTq9whyPUvdmj3VpbOdjxwdw68Oh6S~HwRANISKwSn2tJ8A2toq2qm9UBA7dG4jDX3Njr11-UQ5s~YvoS1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
@@ -54,22 +56,25 @@
             <div style="width: 345px; text-align: center; color: #EEEEEE; font-size: 32px; font-family: Kanit; font-weight: 600; line-height: 40px; word-wrap: break-word">Max Miles from Destination</div>
         </div>
         <div style="justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.2</div>
-            </div>
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            </div>-->
+            <button class="button" type="submit">0.2</button>
+            <!--<div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.5</div>
-            </div>
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            </div> -->
+            <button class="button" type="submit">0.5</button>
+            <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">0.7</div>
-            </div>
-            <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            </div> --> 
+            <button class="button" type="submit">0.7</button>
+
+           <!-- <div style="width: 67px; height: 48px; padding: 10px; background: #64CCC5; border-radius: 15px; justify-content: center; align-items: center; gap: 10px; display: flex">
                 <div style="text-align: center; color: #EEEEEE; font-size: 20px; font-family: Kanit; font-weight: 400; line-height: 20px; word-wrap: break-word">1.0</div>
-            </div>
+            </div> -->
+            <button class="button" type="submit">1.0</button>
         </div>
     </div>
-    <div style="width: 15px; height: 15px; left: 430px; top: 371px; position: absolute; background: #F25F5C; border-radius: 9999px"></div>
-    <div style="width: 200px; height: 200px; left: 195px; top: 346px; position: absolute; background: rgba(100, 204, 197, 0.45); border-radius: 9999px; border: 4px #64CCC5 solid"></div>
 </div>
 </template>
 
