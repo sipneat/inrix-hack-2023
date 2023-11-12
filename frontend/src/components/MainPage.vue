@@ -11,7 +11,9 @@
     </div>
     <div style="width: 486px; height: 101px; left: 477px; top: 17px; position: absolute; text-align: center; color: #EEEEEE; font-size: 70px; font-family: Kanit; font-weight: 600; line-height: 90px; word-wrap: break-word">Parking ++</div>
     <div style="width: 595px; padding-left: 8px; padding-right: 8px; left: 185px; top: 221px; position: absolute; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16); border-radius: 24px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
-        <img style="width: 40px; height: 40px" src="https://via.placeholder.com/40x40" />
+        <img style="width: 40px; height: 40px" src="https://s3-alpha-sig.figma.com/img/2503/8781/6ba33e4e01d59ea6f3e0b1f4aa06d766?Expires=1700438400&Signature=iY6l3mOyKAhYSbcLxMxmYKUVTTzjT1x0B8H3mlbFgMxNOJa9GYnS8aNY4wBXe9oqZBE5fd5dEjqndWc8qxz4R5qLVp9k2UTIfOitWpQZ-8Lcw8NxfZ8Y2RgtmaAxF~kjAseLegrMHowquAvSivWFNMdGhKxGn3Ro0CwRkICPlSpqEA1yMxkyjHFE0ecVWGQl~tjUetyOtO-HdgP9VoaQwACJ6dGyL9g73GdSGTIqP9hUmRfPaX8vheZRZSP2uNgn5vZKTq9whyPUvdmj3VpbOdjxwdw68Oh6S~HwRANISKwSn2tJ8A2toq2qm9UBA7dG4jDX3Njr11-UQ5s~YvoS1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+        <input class="search" type = "text" id = "location" location = "location" placeholder = "ex: Golden Gate Brg">
+        <button style="width: 70px; height: 40px" class="button" type="submit">Submit</button>
         <div style="width: 225px; height: 40px; opacity: 0.30; color: black; font-size: 30px; font-family: Inter; font-weight: 400; word-wrap: break-word"><br/><br/><br/>Enter Location</div>
     </div>
     <div style="width: 302px; height: 6px; left: 945px; top: 418px; position: absolute; background: #EEEEEE; border-radius: 100px"></div>
@@ -20,16 +22,13 @@
         <div style="justify-content: flex-start; align-items: center; gap: 15px; display: inline-flex">
             <div style="width: 53px; flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 55px; display: inline-flex">
                 <div style="width: 45px; height: 45px; position: relative">
-                    <div style="width: 33.75px; height: 41.25px; left: 5.62px; top: 1.88px; position: absolute; border: 2px #EEEEEE solid"></div>
-                    <div style="width: 11.25px; height: 11.25px; left: 16.88px; top: 13.12px; position: absolute; border: 2px #EEEEEE solid"></div>
+                    <img style="width: 40px; height: 40px" src="/Frame.png" />
                 </div>
                 <div style="width: 45px; height: 45px; position: relative; background: #176B87">
-                    <div style="width: 0px; height: 41.25px; left: 22.50px; top: 1.88px; position: absolute; border: 2px #EEEEEE solid"></div>
-                    <div style="width: 22.50px; height: 26.25px; left: 11.25px; top: 9.38px; position: absolute; border: 2px #EEEEEE solid"></div>
+                    <img style="width: 40px; height: 40px" src="public\Frame1.png" />
                 </div>
                 <div style="width: 45px; height: 45px; position: relative">
-                    <div style="width: 37.50px; height: 37.50px; left: 3.75px; top: 3.75px; position: absolute; border: 2px #EEEEEE solid"></div>
-                    <div style="width: 7.50px; height: 15px; left: 22.50px; top: 11.25px; position: absolute; border: 2px #EEEEEE solid"></div>
+                    <img style="width: 40px; height: 40px" src="public\Frame2.png" />
                 </div>
             </div>
             <div style="height: 241px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 60px; display: inline-flex">
@@ -61,3 +60,34 @@
     </div>
 </div>
 </template>
+
+<style scoped>
+
+.main {
+    width: 100%; 
+    height: 100%; 
+    padding-left: 8px; 
+    padding-right: 8px; 
+    background: white; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16); 
+    border-radius: 24px; 
+    overflow: hidden; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 8px; 
+    display: inline-flex
+}
+
+.search {
+    border: none; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0.30; 
+    color: black; 
+    font-size: 30px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+
+</style>
