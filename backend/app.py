@@ -12,7 +12,7 @@ def hello_world():
 
 @app.route('/getToken')
 def getToken():
-    url = "https://api.iq.inrix.com/auth/v1/appToken?appId=97ld5sp5d8&hashToken=OTdsZDVzcDVkOHxXdkl2dzE3ZDVoR3daSVVYQjdHVWF2ejNrdXRaakZYMUlsQlVhT205"
+    url = "https://api.iq.inrix.com/auth/v1/appToken?appId=&hashToken="
 
     payload = {}
     headers = {}
@@ -51,7 +51,7 @@ def processData(adr):
 
 def adrToLatLon(adr):
     adr = adr.replace(" ", "%20")
-    url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + adr + "&key=AIzaSyBKpiq156O3XjKxdWvoEeSOWwqeX_ZNW5c"
+    url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + adr + "&key=KEY"
 
     payload = {}
     headers = {}
